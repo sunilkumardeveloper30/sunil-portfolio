@@ -9,81 +9,103 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Roboto', sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; }
-    header { background: linear-gradient(135deg,#007bff,#6610f2); color: #fff; text-align: center; padding: 70px 20px; }
-    header h1 { font-size: 46px; margin-bottom: 10px; animation: fadeInDown 1s; }
-    header p { font-size: 20px; opacity: 0.9; animation: fadeIn 1.5s; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Roboto', sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; scroll-behavior: smooth; }
 
-    .container { width: 90%; max-width: 1100px; margin: 30px auto; }
+  header { background: linear-gradient(135deg,#007bff,#6610f2); color: #fff; text-align: center; padding: 70px 20px; }
+  header h1 { font-size: 46px; margin-bottom: 10px; animation: fadeInDown 1s; }
+  header p { font-size: 20px; opacity: 0.9; animation: fadeIn 1.5s; }
 
-    .section { background: #fff; border-radius: 10px; padding: 30px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); animation: fadeInUp 1s; }
-    .section h2 { margin-bottom: 15px; border-left: 5px solid #6610f2; padding-left: 10px; color: #6610f2; }
+  nav { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+  nav a { margin-left: 15px; color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+  nav a:hover { color: #ffdd57; }
 
-    .skills-list span { display: inline-block; background: #eee; color: #333; padding: 10px 14px; margin: 5px; border-radius: 5px; }
+  .container { width: 90%; max-width: 1100px; margin: 30px auto; }
 
-    .project-card { padding: 15px; background: #fafafa; border-left: 4px solid #007bff; margin-bottom: 15px; border-radius: 6px; transition: transform 0.3s; }
-    .project-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-    .project-card a { color: #007bff; font-weight: bold; }
+  .section { background: #fff; border-radius: 10px; padding: 30px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); animation: fadeInUp 1s; }
+  .section h2 { margin-bottom: 15px; border-left: 5px solid #6610f2; padding-left: 10px; color: #6610f2; }
 
-    .experience-item { margin-bottom: 15px; padding-left: 15px; border-left: 4px solid #6610f2; }
-    .experience-item h3 { font-size: 18px; color: #6610f2; margin-bottom: 5px; }
-    .experience-item p { font-size: 15px; }
+  .skills-list { margin-top: 10px; }
+  .skills-list .skill { margin-bottom: 10px; }
+  .skills-bar { background: #eee; border-radius: 8px; overflow: hidden; height: 20px; }
+  .skills-bar span { display: block; height: 100%; background: #007bff; width: 0; text-align: right; padding-right: 5px; color: white; font-size: 12px; line-height: 20px; border-radius: 8px; }
 
-    footer { text-align: center; padding: 20px; background: #222; color: white; margin-top: 40px; }
+  .project-card { padding: 15px; background: #fafafa; border-left: 4px solid #007bff; margin-bottom: 15px; border-radius: 6px; transition: transform 0.3s; }
+  .project-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+  .project-card a { color: #007bff; font-weight: bold; }
 
-    a { color: #007bff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+  .experience-item { margin-bottom: 15px; padding-left: 15px; border-left: 4px solid #6610f2; }
+  .experience-item h3 { font-size: 18px; color: #6610f2; margin-bottom: 5px; }
+  .experience-item p { font-size: 15px; }
 
-    /* Animations */
-    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-    @keyframes fadeInDown { from {opacity:0; transform: translateY(-20px);} to {opacity:1; transform:translateY(0);} }
-    @keyframes fadeInUp { from {opacity:0; transform: translateY(20px);} to {opacity:1; transform:translateY(0);} }
+  footer { text-align: center; padding: 20px; background: #222; color: white; margin-top: 40px; }
 
+  a { color: #007bff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .social { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; }
+  .social a { margin-top: 10px; background: #007bff; color: #fff; padding: 10px; border-radius: 50%; display: inline-block; text-align: center; transition: transform 0.3s; }
+  .social a:hover { transform: translateY(-5px); background: #6610f2; }
+
+  /* Animations */
+  @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+  @keyframes fadeInDown { from {opacity:0; transform: translateY(-20px);} to {opacity:1; transform:translateY(0);} }
+  @keyframes fadeInUp { from {opacity:0; transform: translateY(20px);} to {opacity:1; transform:translateY(0);} }
 </style>
 </head>
 
 <body>
 
+<!-- Navigation -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 <header>
-    <h1>Sunil Kumar</h1>
-    <p>WordPress & Frontend Developer | SEO Specialist | 13+ Years Experience</p>
+  <h1>Sunil Kumar</h1>
+  <p>WordPress & Frontend Developer | SEO Management & Optimization | 13+ Years Experience</p>
 </header>
 
 <div class="container">
 
     <!-- About Section -->
-    <div class="section">
+    <div class="section" id="about">
         <h2>About Me</h2>
         <p>
             I am a Web Developer with over 13 years of IT experience, specializing in WordPress development, 
             frontend design (HTML5, CSS3, PHP, MySQL, JavaScript), responsive layouts, website optimization, 
-            and SEO. I focus on building high-performance, user-friendly websites that help businesses grow.
+            and SEO management. I focus on building high-performance, user-friendly websites.
         </p>
     </div>
 
     <!-- Skills Section -->
-    <div class="section">
+    <div class="section" id="skills">
         <h2>Skills</h2>
         <div class="skills-list">
-            <span>WordPress</span>
-            <span>Elementor</span>
-            <span>WPBakery</span>
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>PHP</span>
-            <span>MySQL</span>
-            <span>JavaScript</span>
-            <span>SEO</span>
-            <span>Responsive Design</span>
-            <span>Website Optimization</span>
-            <span>Photoshop</span>
-            <span>Google Workspace</span>
+            <div class="skill">WordPress
+                <div class="skills-bar"><span style="width: 95%;">95%</span></div>
+            </div>
+            <div class="skill">HTML5 / CSS3
+                <div class="skills-bar"><span style="width: 90%;">90%</span></div>
+            </div>
+            <div class="skill">JavaScript
+                <div class="skills-bar"><span style="width: 70%;">70%</span></div>
+            </div>
+            <div class="skill">SEO Management
+                <div class="skills-bar"><span style="width: 80%;">80%</span></div>
+            </div>
+            <div class="skill">Elementor / WPBakery
+                <div class="skills-bar"><span style="width: 95%;">95%</span></div>
+            </div>
         </div>
     </div>
 
     <!-- Professional Experience Section -->
-    <div class="section">
+    <div class="section" id="experience">
         <h2>Professional Experience</h2>
 
         <div class="experience-item">
@@ -100,18 +122,20 @@
         <div class="experience-item">
             <h3>Onlineres India Pvt. Ltd. – Web Designer & Developer (Feb 2009 – Mar 2019)</h3>
             <p>Worked in multiple roles including web development, business development, and training. Built PHP & WordPress websites, managed e-commerce projects, and optimized frontend layouts.</p>
-            <p>Websites: <a href="https://sitatours.com" target="_blank">Sita Tours</a>, <a href="https://rupaliscookery.com" target="_blank">Rupali’s Cookery</a>, <a href="https://www.cakecraftshop.in" target="_blank">Cake Craft Shop</a></p>
+            <p>Websites: <a href="https://sitatours.com" target="_blank">Sita Tours</a>, 
+            <a href="https://rupaliscookery.com" target="_blank">Rupali’s Cookery</a>, 
+            <a href="https://www.cakecraftshop.in" target="_blank">Cake Craft Shop</a></p>
         </div>
 
     </div>
 
     <!-- Projects Section -->
-    <div class="section">
+    <div class="section" id="projects">
         <h2>Projects</h2>
 
         <div class="project-card">
             <h3>SIS Certifications</h3>
-            <p>WordPress website with SEO and responsive design.</p>
+            <p>WordPress website with SEO management and responsive design.</p>
             <a href="https://www.siscertifications.com" target="_blank">Visit Website</a>
         </div>
 
@@ -135,12 +159,18 @@
     </div>
 
     <!-- Contact Section -->
-    <div class="section">
+    <div class="section" id="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:sunilkumardeveloper30@gmail.com">sunilkumardeveloper30@gmail.com</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/sunil-kumar-wordpress-seo/" target="_blank">Sunil Kumar LinkedIn</a></p>
     </div>
 
+</div>
+
+<!-- Floating Social Icons -->
+<div class="social">
+    <a href="mailto:sunilkumardeveloper30@gmail.com" title="Email">✉️</a>
+    <a href="https://www.linkedin.com/in/sunil-kumar-wordpress-seo/" target="_blank" title="LinkedIn">in</a>
 </div>
 
 <footer>
