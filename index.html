@@ -1,147 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sunil Kumar | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunil Kumar | Portfolio</title>
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-            color: #333;
-            line-height: 1.6;
-        }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-        header {
-            background: linear-gradient(135deg, #007bff, #6610f2);
-            color: #fff;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        header h1 { font-size: 42px; margin-bottom: 10px; }
-        header p { font-size: 20px; opacity: 0.9; }
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; }
+    header { background: linear-gradient(135deg,#007bff,#6610f2); color: #fff; text-align: center; padding: 70px 20px; }
+    header h1 { font-size: 46px; margin-bottom: 10px; animation: fadeInDown 1s; }
+    header p { font-size: 20px; opacity: 0.9; animation: fadeIn 1.5s; }
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 30px auto;
-        }
+    .container { width: 90%; max-width: 1100px; margin: 30px auto; }
 
-        .section {
-            background: white;
-            border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
+    .section { background: #fff; border-radius: 10px; padding: 30px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); animation: fadeInUp 1s; }
+    .section h2 { margin-bottom: 15px; border-left: 5px solid #6610f2; padding-left: 10px; color: #6610f2; }
 
-        .section h2 {
-            margin-bottom: 15px;
-            border-left: 5px solid #6610f2;
-            padding-left: 10px;
-        }
+    .skills-list span { display: inline-block; background: #eee; color: #333; padding: 10px 14px; margin: 5px; border-radius: 5px; }
 
-        .skills-list span {
-            display: inline-block;
-            background: #eee;
-            color: #333;
-            padding: 10px 14px;
-            margin: 5px;
-            border-radius: 5px;
-        }
+    .project-card { padding: 15px; background: #fafafa; border-left: 4px solid #007bff; margin-bottom: 15px; border-radius: 6px; transition: transform 0.3s; }
+    .project-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    .project-card a { color: #007bff; font-weight: bold; }
 
-        .project-card {
-            padding: 15px;
-            background: #fafafa;
-            border-left: 4px solid #007bff;
-            margin-bottom: 10px;
-            border-radius: 6px;
-        }
+    .experience-item { margin-bottom: 15px; padding-left: 15px; border-left: 4px solid #6610f2; }
+    .experience-item h3 { font-size: 18px; color: #6610f2; margin-bottom: 5px; }
+    .experience-item p { font-size: 15px; }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #222;
-            color: white;
-            margin-top: 40px;
-        }
+    footer { text-align: center; padding: 20px; background: #222; color: white; margin-top: 40px; }
 
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
+    a { color: #007bff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    /* Animations */
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+    @keyframes fadeInDown { from {opacity:0; transform: translateY(-20px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes fadeInUp { from {opacity:0; transform: translateY(20px);} to {opacity:1; transform:translateY(0);} }
+
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Sunil Kumar</h1>
-        <p>Web Developer | WordPress & Elementor Specialist</p>
-    </header>
+<header>
+    <h1>Sunil Kumar</h1>
+    <p>WordPress & Frontend Developer | SEO Specialist | 13+ Years Experience</p>
+</header>
 
-    <div class="container">
+<div class="container">
 
-        <div class="section">
-            <h2>About Me</h2>
-            <p>
-                I am a Web Developer with 13+ years of overall IT experience and strong skills in 
-                WordPress, Elementor, PHP basics, HTML5, CSS3, JavaScript and website optimization. 
-                I specialize in building responsive, modern, user-friendly websites.
-            </p>
+    <!-- About Section -->
+    <div class="section">
+        <h2>About Me</h2>
+        <p>
+            I am a Web Developer with over 13 years of IT experience, specializing in WordPress development, 
+            frontend design (HTML5, CSS3, PHP, MySQL, JavaScript), responsive layouts, website optimization, 
+            and SEO. I focus on building high-performance, user-friendly websites that help businesses grow.
+        </p>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <span>WordPress</span>
+            <span>Elementor</span>
+            <span>WPBakery</span>
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+            <span>JavaScript</span>
+            <span>SEO</span>
+            <span>Responsive Design</span>
+            <span>Website Optimization</span>
+            <span>Photoshop</span>
+            <span>Google Workspace</span>
+        </div>
+    </div>
+
+    <!-- Professional Experience Section -->
+    <div class="section">
+        <h2>Professional Experience</h2>
+
+        <div class="experience-item">
+            <h3>SIS Certifications Pvt. Ltd. – WordPress & SEO Developer (Aug 2022 – Nov 2025)</h3>
+            <p>Developed and managed company websites using WordPress, implemented SEO strategies, optimized performance, and created responsive, user-friendly designs.</p>
+            <p>Websites: <a href="https://www.siscertifications.com" target="_blank">SIS Certifications</a>, 
+            <a href="https://www.mscincorporation.com" target="_blank">MSC Incorporation</a>,
+            <a href="https://siscertifications.co.in" target="_blank">SIS Certifications Co India</a>,
+            <a href="https://isocertification-siskuwait.com" target="_blank">ISO Certification SISKuwait</a>,
+            <a href="https://www.isocertnews.com" target="_blank">ISO Cert News</a>,
+            <a href="https://www.ioaservices.org" target="_blank">IOA Services</a></p>
         </div>
 
-        <div class="section">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <span>HTML5</span>
-                <span>CSS3</span>
-                <span>JavaScript</span>
-                <span>WordPress</span>
-                <span>Elementor</span>
-                <span>SEO</span>
-                <span>Responsive Design</span>
-                <span>GitHub</span>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Projects</h2>
-
-            <div class="project-card">
-                <h3>Global Sol Group</h3>
-                <p>Corporate website created using WordPress & Elementor.</p>
-                <a href="https://globalsolgroup.com" target="_blank">Visit Website</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Demo Portfolio</h3>
-                <p>Modern portfolio website built for coding & design showcase.</p>
-            </div>
-
-        </div>
-
-        <div class="section">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:sunilkumardeveloper30@gmail.com">sunilkumardeveloper30@gmail.com</a></p>
-            <p>LinkedIn: 
-                <a href="https://www.linkedin.com/in/sunil-kumar-wordpress-seo/" target="_blank">
-                    Sunil Kumar LinkedIn
-                </a>
-            </p>
+        <div class="experience-item">
+            <h3>Onlineres India Pvt. Ltd. – Web Designer & Developer (Feb 2009 – Mar 2019)</h3>
+            <p>Worked in multiple roles including web development, business development, and training. Built PHP & WordPress websites, managed e-commerce projects, and optimized frontend layouts.</p>
+            <p>Websites: <a href="https://sitatours.com" target="_blank">Sita Tours</a>, <a href="https://rupaliscookery.com" target="_blank">Rupali’s Cookery</a>, <a href="https://www.cakecraftshop.in" target="_blank">Cake Craft Shop</a></p>
         </div>
 
     </div>
 
-    <footer>
-        © 2026 Sunil Kumar – Portfolio
-    </footer>
+    <!-- Projects Section -->
+    <div class="section">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+            <h3>SIS Certifications</h3>
+            <p>WordPress website with SEO and responsive design.</p>
+            <a href="https://www.siscertifications.com" target="_blank">Visit Website</a>
+        </div>
+
+        <div class="project-card">
+            <h3>MSC Incorporation</h3>
+            <p>Frontend improvements, performance optimization, and user-friendly layout.</p>
+            <a href="https://www.mscincorporation.com" target="_blank">Visit Website</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Sita Tours</h3>
+            <p>Built using PHP (later migrated to WordPress) with responsive design and SEO-friendly structure.</p>
+            <a href="https://sitatours.com" target="_blank">Visit Website</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Rupali’s Cookery</h3>
+            <p>E-commerce frontend development and product showcase.</p>
+            <a href="https://rupaliscookery.com" target="_blank">Visit Website</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:sunilkumardeveloper30@gmail.com">sunilkumardeveloper30@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sunil-kumar-wordpress-seo/" target="_blank">Sunil Kumar LinkedIn</a></p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Sunil Kumar – Portfolio
+</footer>
 
 </body>
 </html>
