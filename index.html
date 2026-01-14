@@ -1,154 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sunil Kumar | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunil Kumar | Portfolio</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #333;
-    }
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
 
-    header {
-      background: linear-gradient(to right, #005bea, #00c6fb);
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
+        header {
+            background: linear-gradient(135deg, #007bff, #6610f2);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 { font-size: 42px; margin-bottom: 10px; }
+        header p { font-size: 20px; opacity: 0.9; }
 
-    header h1 {
-      font-size: 42px;
-      margin: 0;
-    }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
 
-    header p {
-      font-size: 18px;
-      margin-top: 10px;
-      opacity: 0.9;
-    }
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
 
-    .section {
-      width: 85%;
-      max-width: 1100px;
-      margin: 40px auto;
-    }
+        .section h2 {
+            margin-bottom: 15px;
+            border-left: 5px solid #6610f2;
+            padding-left: 10px;
+        }
 
-    h2 {
-      border-left: 5px solid #005bea;
-      padding-left: 10px;
-      font-size: 26px;
-    }
+        .skills-list span {
+            display: inline-block;
+            background: #eee;
+            color: #333;
+            padding: 10px 14px;
+            margin: 5px;
+            border-radius: 5px;
+        }
 
-    .skills ul, .projects ul {
-      list-style: none;
-      padding: 0;
-    }
+        .project-card {
+            padding: 15px;
+            background: #fafafa;
+            border-left: 4px solid #007bff;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
 
-    .skills li, .projects li {
-      background: white;
-      padding: 14px 20px;
-      margin: 10px 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+            margin-top: 40px;
+        }
 
-    .project-box {
-      background: white;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
 
-    .project-box a {
-      text-decoration: none;
-      color: #005bea;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #222;
-      color: white;
-      margin-top: 40px;
-    }
-  </style>
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Sunil Kumar</h1>
-  <p>WordPress Developer | HTML | CSS | PHP | SEO Specialist</p>
-</header>
+    <header>
+        <h1>Sunil Kumar</h1>
+        <p>Web Developer | WordPress & Elementor Specialist</p>
+    </header>
 
-<div class="section about">
-  <h2>About Me</h2>
-  <p>
-    I am a web developer with 13+ years of experience in WordPress development, 
-    responsive design, performance optimization, and SEO. I build modern, fast, 
-    and user-friendly websites that help businesses grow.
-  </p>
-</div>
+    <div class="container">
 
-<div class="section skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>WordPress, Elementor, WPBakery</li>
-    <li>HTML5, CSS3, PHP, MySQL, JavaScript</li>
-    <li>SEO: On-Page, Off-Page, Search Console, Analytics</li>
-    <li>Website Speed Optimization & Mobile Responsiveness</li>
-    <li>Photoshop, MS Office, Google Workspace</li>
-  </ul>
-</div>
+        <div class="section">
+            <h2>About Me</h2>
+            <p>
+                I am a Web Developer with 13+ years of overall IT experience and strong skills in 
+                WordPress, Elementor, PHP basics, HTML5, CSS3, JavaScript and website optimization. 
+                I specialize in building responsive, modern, user-friendly websites.
+            </p>
+        </div>
 
-<div class="section projects">
-  <h2>Projects</h2>
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>WordPress</span>
+                <span>Elementor</span>
+                <span>SEO</span>
+                <span>Responsive Design</span>
+                <span>GitHub</span>
+            </div>
+        </div>
 
-  <div class="project-box">
-    <strong>SIS Certifications</strong>  
-    <br><a href="https://www.siscertifications.com" target="_blank">Visit Website</a>
-    <p>Developed and managed complete WordPress website with SEO & performance optimization.</p>
-  </div>
+        <div class="section">
+            <h2>Projects</h2>
 
-  <div class="project-box">
-    <strong>MSC Incorporation</strong>  
-    <br><a href="https://www.mscincorporation.com" target="_blank">Visit Website</a>
-    <p>Handled frontend design, responsiveness, and SEO implementation.</p>
-  </div>
+            <div class="project-card">
+                <h3>Global Sol Group</h3>
+                <p>Corporate website created using WordPress & Elementor.</p>
+                <a href="https://globalsolgroup.com" target="_blank">Visit Website</a>
+            </div>
 
-  <div class="project-box">
-    <strong>SIS Certifications India</strong>  
-    <br><a href="https://siscertifications.co.in" target="_blank">Visit Website</a>
-    <p>Created custom templates and improved layout + loading speed.</p>
-  </div>
+            <div class="project-card">
+                <h3>Demo Portfolio</h3>
+                <p>Modern portfolio website built for coding & design showcase.</p>
+            </div>
 
-  <div class="project-box">
-    <strong>ISO Cert News</strong>  
-    <br><a href="https://www.isocertnews.com" target="_blank">Visit Website</a>
-    <p>Developed content-friendly and mobile-optimized site.</p>
-  </div>
-</div>
+        </div>
 
-<div class="section contact">
-  <h2>Contact</h2>
-  <p>Email: 
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sunilkumardeveloper30@gmail.com" target="_blank">
-    sunilkumardeveloper30@gmail.com
-  </a>
-</p>
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:sunilkumardeveloper30@gmail.com">sunilkumardeveloper30@gmail.com</a></p>
+            <p>LinkedIn: 
+                <a href="https://www.linkedin.com/in/sunil-kumar-wordpress-seo/" target="_blank">
+                    Sunil Kumar LinkedIn
+                </a>
+            </p>
+        </div>
 
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/sunil-kumar-wordpress-seo/" target="_blank">https://www.linkedin.com/in/sunil-kumar-wordpress-seo/</a></p>
-</div>
+    </div>
 
-<footer>
-  © 2026 Sunil Kumar — Portfolio Website
-</footer>
+    <footer>
+        © 2026 Sunil Kumar – Portfolio
+    </footer>
 
 </body>
 </html>
